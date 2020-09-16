@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import api from '../../services/api'
-
+import './style.css'
+import arrow from '../../assets/arrow-left.svg'
 export default class Product extends Component {
     state = {
         product: {}
@@ -19,12 +21,23 @@ export default class Product extends Component {
 
       return (
           <div className="product-info">
-              <h1>{product.title}</h1>
-              <p>{product.description}</p>
-              <p>
-                 URL: <a href={product.url}>{product.url}</a>
-              </p>
+              <div className="box">
+                <h1>{product.title}</h1>
+                <p>{product.description}</p>
+                <p>
+                    URL: <a href={product.url}>{product.url}</a>
+                </p>
+              </div>
+             <div className="link">
+                <Link to="/">
+                     <img src={arrow} alt="Voltar" />
+                     <span>Voltar</span>
+                </Link>
+             </div>
+              
           </div>
+        
+          
       )
     }
 }
