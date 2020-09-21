@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import api from '../../services/api'
+import del from '../../assets/deletar.png'
 import './style.css'
 
 export default class Main extends Component{
@@ -53,7 +54,9 @@ export default class Main extends Component{
                    <article key={product._id}>
                        <strong>{product.title}</strong>
                        <p>{product.description}</p>
-                       <Link to={`/products/${product._id}`}>Acessar</Link>
+
+                        <Link className="acess" to={`/products/${product._id}`}>Acessar</Link>
+                        <Link to={`/products/del/${product._id}`}><img src={del} alt="Deletar"/></Link>
                    </article>
                 ))}
            

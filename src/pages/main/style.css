@@ -20,7 +20,7 @@
     letter-spacing: 0.1em;
 }
 
-.product-list a{
+.product-list .acess {
     height: 42px;
     border-radius: 5px;
     border: 2px solid #da552f;
@@ -36,9 +36,16 @@
     transition: all 0.2s;
 }
 
-.product-list a:hover{
+.product-list .acess:hover{
     background: #da552f;
     color: white;
+}
+
+
+.product-list img{
+    margin: 20px auto;
+    width: 30px;
+    height: 30px;
 }
 
 .product-list .actions{
